@@ -1,4 +1,4 @@
-# training_protein
+# training-reveng
 
 training rev eng
 

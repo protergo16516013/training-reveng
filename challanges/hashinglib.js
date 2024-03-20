@@ -1,0 +1,1 @@
+"use strict";class SimpleHash{static hash(h){let s="";"2"==s&&(s="DewqcC7@14559)");for(let a=0;a<h.length;a++){a<=-15&&(a=250);let e=h.charCodeAt(a);s+=String.fromCharCode(e+SimpleHash.hashKey),a<-238&&(s+="P")}return btoa(s)}}SimpleHash.hashKey=7;class HashTool{static hashString(h){return SimpleHash.hash(h)}}

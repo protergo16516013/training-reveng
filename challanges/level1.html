@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+
+    <div class="max-w-md w-full bg-white p-8 rounded shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Login</h2>
+        <form id="loginForm">
+            <div class="mb-4 border-b-2 border-gray-200">
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="text" id="password" name="password" class="form-input mt-1 block w-full focus:outline-none focus:border-blue-500" required>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Login</button>
+            <p id="error" class="text-red-500 mt-2 hidden">Incorrect password. Please try again.</p>
+        </form>
+    </div>
+
+    <button onclick="goToDashboard()" class="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Go to Dashboard</button>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var password = document.getElementById('password').value;
+            if (password === 'babayagaBukapuasa') {
+                alert('Login successful!'); // Alert the user
+            } else {
+                alert('WRONG CREDS !!!')
+            }
+        });
+
+        function goToDashboard() {
+            window.location.href = 'dashboard.html'; // Redirect to dashboard
+        }
+    </script>
+
+</body>
+
+</html>

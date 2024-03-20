@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen flex flex-col items-center justify-center">
+
+    <div class="max-w-md w-full bg-white p-8 rounded shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Login</h2>
+        <form id="loginForm">
+            <div class="mb-4 border-b-2 border-gray-200">
+                <label for="username" class="block text-gray-700">Username</label>
+                <input type="text" id="username" name="username" class="form-input mt-1 block w-full focus:outline-none focus:border-blue-500" required>
+            </div>
+            <div class="mb-4 border-b-2 border-gray-200">
+                <label for="password" class="block text-gray-700">Password</label>
+                <input type="text" id="password" name="password" class="form-input mt-1 block w-full focus:outline-none focus:border-blue-500" required>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Login</button>
+            <p id="error" class="text-red-500 mt-2 hidden">Incorrect username or password. Please try again.</p>
+        </form>
+    </div>
+
+    <button onclick="goToDashboard()" class="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300">Go to Dashboard</button>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                var username = document.getElementById('username').value.split("");
+                var password = document.getElementById('password').value.split("");
+                if (username[1] === "a" && password[4] === "a") {
+                    if (username[6] === "a" && password[2] === "a") {
+                        if (username[10] === "2" && password[8] === "g") {
+                            if (username[8] === "g" && password[3] === "s") {
+                                if (username[7] === "n" && password[1] === "u") {
+                                    if (username[4] === "n" && password[0] === "p") {
+                                        if (username[9] === "1" && password[6] === "a") {
+                                            if (username[3] === "a" && password[9] === "1") {
+                                                if (username[0] === "m" && password[10] === "9") {
+                                                    if (username[2] === "k" && password[5] === "b") {
+                                                        if (username[5] === "b" && password[7] === "n") {
+                                                            alert('Login successful!');
+                                                        } else {
+                                                            alert('WRONG CREDS !!!')
+                                                        }
+                                                    } else {
+                                                        alert('WRONG CREDS !!!')
+                                                    }
+                                                } else {
+                                                    alert('WRONG CREDS !!!')
+                                                }
+                                            } else {
+                                                alert('WRONG CREDS !!!')
+                                            }
+                                        } else {
+                                            alert('WRONG CREDS !!!')
+                                        }
+                                    } else {
+                                        alert('WRONG CREDS !!!')
+                                    }
+                                } else {
+                                    alert('WRONG CREDS !!!')
+                                }
+                            } else {
+                                alert('WRONG CREDS !!!')
+                            }
+                        } else {
+                            alert('WRONG CREDS !!!')
+                        }
+                    } else {
+                        alert('WRONG CREDS !!!')
+                    }
+                } else {
+                    alert('WRONG CREDS !!!')
+                }
+            });
+        });
+
+        function goToDashboard() {
+            window.location.href = 'dashboard.html'; // Redirect to dashboard
+        }
+    </script>
+
+</body>
+
+</html>
